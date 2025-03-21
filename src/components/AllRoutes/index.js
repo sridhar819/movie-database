@@ -1,4 +1,4 @@
-import {useLocation} from 'react-router-dom'
+import {useLocation, Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
 import {useState, useEffect} from 'react'
 
@@ -107,7 +107,15 @@ const AllRoutes = ({type = '', searchUrl = ''}) => {
     case stagesList.initial:
       return renderLoader()
     case stagesList.success:
-      return successView()
+      return data.movieList.length >= 1 ? (
+        successView()
+      ) : (
+        <Link className="d-flex justify-content-center mt-5" to="/">
+          <button className="btn btn-primary" type="button">
+            Go to home page
+          </button>
+        </Link>
+      )
     default:
       return null
   }

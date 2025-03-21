@@ -15,10 +15,10 @@ body {
 }
 
 .bg-container {
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   width: 100vw;
-  overflow: hidden;
+  overflow: auto;
   color: #ffffff;
 }
 
