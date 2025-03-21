@@ -35,7 +35,7 @@ const MovieDetails = props => {
         backdropPath: apiData.backdrop_path,
         releaseDate: apiData.release_date,
         posterPath: apiData.poster_path,
-        collection: apiData.belongs_to_collection,
+        collection: apiData.belongs_to_collection?.name,
         voteAverage: apiData.vote_average,
         voteCount: apiData.vote_count,
         productionCompanies: apiData.production_companies.map(each => ({
@@ -115,7 +115,18 @@ const MovieDetails = props => {
           <p style={{fontSize: '14px'}} className="mt-2 text-secondary">
             Popularity: {popularity}
           </p>
+          {adult && <p className="text-danger">{adult}</p>}
           <p style={{fontSize: '12px'}}>{tagline}</p>
+          {homepage && (
+            <a
+              className="fw-bold"
+              href={homepage}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Movie
+            </a>
+          )}
         </div>
       </div>
     </div>

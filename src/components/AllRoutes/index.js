@@ -1,6 +1,6 @@
 import {useLocation, Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 
 import MovieItem from '../MovieItem'
 import useFetch from '../../useFetch'
@@ -15,7 +15,7 @@ const stagesList = {
 function renderLoader() {
   return (
     <div className="d-flex align-items-center justify-content-center">
-      <Loader type="ThreeDots" height={45} width={45} color="red" />
+      <Loader type="ThreeDots" height={45} width={45} color="orange" />
     </div>
   )
 }
@@ -27,7 +27,7 @@ const AllRoutes = ({type = '', searchUrl = ''}) => {
 
   const data = useFetch(fetchurl, pageNo)
 
-  console.log('searchAllRoutes', searchUrl)
+  console.log(data, 'data')
 
   const location = useLocation()
 

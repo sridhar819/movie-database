@@ -33,6 +33,7 @@
   }
   .poster {
     min-height: 140px;
+    max-height: 300px;
   }
 }
 

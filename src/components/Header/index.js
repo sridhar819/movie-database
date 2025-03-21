@@ -22,6 +22,11 @@ const Header = props => {
     }
   }
 
+  const handleSearchBtn = () => {
+    addSearchValue(searchInput)
+    history.push('/searched-movies')
+  }
+
   return (
     <nav className="navbar pt-3">
       <ul className="menu-card">
@@ -67,7 +72,9 @@ const Header = props => {
           value={searchInput}
           placeholder="Enter Movie Name"
         />
-        <button type="button">search</button>
+        <button onClick={handleSearchBtn} type="button">
+          Search
+        </button>
       </div>
     </nav>
   )

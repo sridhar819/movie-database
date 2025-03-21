@@ -1,4 +1,3 @@
-import {useState, useEffect} from 'react'
 import AllRoutes from '../AllRoutes'
 
 import SearchContext from '../../SearchContext'

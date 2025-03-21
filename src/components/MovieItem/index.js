@@ -19,14 +19,10 @@ const MovieItem = props => {
     history.push(`/movie/${id}`)
   }
 
-  // : 'https://st4.depositphotos.com/14953852/24787/v/450/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg'
-
   return (
     <div className="movie-item pb-5">
       <img className="poster" src={posterPath} alt={title} />
-      <h1 className="mt-2 ps-2">
-        {title.length < 30 ? title : `${title.slice(0, 30)}...`}
-      </h1>
+      <h1 className="mt-2 ps-2">{title}</h1>
       {overview && <p className="overview px-2">{overview}</p>}
       {adult && <p className="adult">18 +</p>}
       <div className="d-flex px-2 justify-content-between align-items-center mb-2">
@@ -45,6 +41,7 @@ const MovieItem = props => {
         onClick={navToDetails}
         id="viewDetailsBtn"
         className="btn btn-outline-primary ms-2 mb-2"
+        type="button"
       >
         View Details
       </button>

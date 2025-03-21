@@ -30,7 +30,9 @@ const useFetch = (type = '', page = 1) => {
         ...each,
         originalLanguage: each.original_language,
         originalTitle: each.original_title,
-        posterPath: `https://image.tmdb.org/t/p/w200/${each.poster_path}`,
+        posterPath: each.poster_path
+          ? `https://image.tmdb.org/t/p/w500${each.poster_path}`
+          : 'https://st4.depositphotos.com/14953852/24787/v/450/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg',
         releaseDate: each.release_date,
         voteAverage: each.vote_average,
         voteCount: each.vote_count,
@@ -44,6 +46,14 @@ const useFetch = (type = '', page = 1) => {
       })
     }
   }
+
+  useEffect(() => {
+    setData(prevData => ({
+      ...prevData,
+      movieList: [],
+      activeStage: stagesList.initial,
+    }))
+  }, [page])
 
   useEffect(() => {
     getData()
