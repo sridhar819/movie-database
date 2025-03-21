@@ -1,0 +1,8 @@
+.movie-list {
+  display: flex;
+  padding: 12px;
+  flex-wrap: wrap;
+  background: linear-gradient(rgba(0, 0, 1, 0.679), rgba(0, 0, 1, 0.279));
+  justify-content: start;
+  gap: 10px;
+}
