@@ -1,0 +1,83 @@
+.navbar {
+  padding: 5px 10px;
+  background: linear-gradient(to right, rgba(0, 0, 1, 0.337), rgba(0, 0, 0.5));
+  position: sticky;
+  box-shadow: 0 0 4px 0 #bfbfbf;
+  top: 0;
+  color: white;
+  z-index: 10;
+  width: 100%;
+}
+
+.menu-card {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  column-gap: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.nav-head {
+  font-size: 25px;
+  letter-spacing: 1.3px;
+  font-family: 'Bree Serif';
+  margin: 0 10px 0 0;
+  color: red;
+}
+
+.menu-name {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.menu-name:hover {
+  color: yellow;
+  animation: smooth 0.3s ease-in-out;
+}
+
+@keyframes smooth {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+.active {
+  color: red;
+  font-size: 17px;
+  font-weight: bold;
+  border-bottom: 2px solid rgb(76, 200, 76);
+  border-radius: 50%;
+  padding-bottom: 5px;
+}
+
+.search-card {
+  border-radius: 10px;
+  background-color: transparent;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  padding: 0 10px;
+}
+
+.search-card input[type='text'] {
+  background-color: transparent;
+  width: 90%;
+  height: 100%;
+  outline: none;
+  padding: 0;
+  color: white;
+}
+
+.search-card button {
+  border: none;
+  outline: none;
+  color: white;
+  background-color: transparent;
+}
